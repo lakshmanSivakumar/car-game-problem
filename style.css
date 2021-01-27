@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+h1 {
+    text-align: center;
+}
+
+.startBtnDiv {
+    text-align: center;
+}
+
+.startBtn {
+    font-size: 1.2em;
+    padding: 10px 25px;
+    border: 3px solid #0072B5;
+    background-color: white;
+    color: #0072B5;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+.startBtn:hover {
+    background-color: #0072B5;
+    color: white;
+}
+
+.gameStatus {
+    text-align: center;
+    padding: 40px 0px;
+}
