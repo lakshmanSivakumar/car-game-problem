@@ -40,7 +40,7 @@ function startGame () {
         petrolRemaining -= position;
         
         if(petrolRemaining < 0) {
-            gameStatus.lastElementChild.innerHTML = `<h3>Move ${move-1} - Car at ${cumulativePosition-position}, petrol remaining ${petrolRemaining+position}, game over</h3>`;
+            gameStatus.lastElementChild.innerHTML = `<h3>Move ${move-1} - Car at ${cumulativePosition-position}, remaining ${petrolRemaining+position}, game over</h3>`;
             break;
         }
 
