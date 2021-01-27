@@ -18,7 +18,11 @@ petrolPumps.sort((a, b) =>  a - b);
 
 startBtn.addEventListener('click', startGame);
 
-function startGame () {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function startGame () {
     click += 1;
     if(click === 2) {
     
@@ -40,7 +44,9 @@ function startGame () {
         petrolRemaining -= position;
         
         if(petrolRemaining < 0) {
-            gameStatus.lastElementChild.innerHTML = `<h3>Move ${move-1} - Car at ${cumulativePosition-position}, petrol remaining ${petrolRemaining+position}, game over</h3>`;
+            setTimeout(() => { }, 500);
+            gameStatus.lastElementChild.innerHTML = `<h4>Move ${move-1} - Car at ${cumulativePosition-position}, petrol remaining ${petrolRemaining+position}, game over</h4>`;
+            
             break;
         }
 
@@ -53,6 +59,8 @@ function startGame () {
             html = `<h3>Move ${move} - Car at ${cumulativePosition}, petrol remaining ${petrolRemaining} , reached the destination</h3>`;
         }
 
+        await sleep(300);
         gameStatus.innerHTML += html;
+        
     }
 }
